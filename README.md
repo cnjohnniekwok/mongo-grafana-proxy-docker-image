@@ -1,5 +1,5 @@
 # mongo-grafana_proxy
-Mongo proxy for grafana MongoDB datasource. This is a docker image for stand alone mongo proxy server that runs along with [grafana-x.x.x-mongods](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-7.4.2-mongods).
+Mongo proxy for grafana MongoDB datasource. This is a docker image for stand alone mongo proxy server that runs along with [grafana-mongods](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods).
 
 # grafana-mongods:7.4.2 ([Docker Hub](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods))
 Use specific granfana version (current build image is 7.4.2) with [JamesOsgood / mongodb-grafana](https://github.com/JamesOsgood/mongodb-grafana) plugin installed (Run proxy separately)
