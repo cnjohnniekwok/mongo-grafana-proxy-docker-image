@@ -1,6 +1,15 @@
 # mongo-grafana_proxy
 Mongo proxy for grafana MongoDB datasource. This is a docker image for stand alone mongo proxy server that runs along with [grafana-mongods](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods).
 
+This mongo-grafna_proxy is mondified to allow multiple database access from using a single MongoDB data source.
+
+
+Database query syntax:
+```
+db.<database>.<collection>.aggregate({})
+```
+
+
 # grafana-mongods:7.4.2 ([Docker Hub](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods))
 Use specific granfana version (current build image is 7.4.2) with [JamesOsgood / mongodb-grafana](https://github.com/JamesOsgood/mongodb-grafana) plugin installed (Run proxy separately)
 
@@ -26,7 +35,7 @@ docker run -d --name="mongo-grafana_proxy" --network grafana-mongodb cnjohnniekw
 
 ***Grafana MongoDB datasource settings:***
 
-Grafana Configuration -> Data Sources tab -> MongoDB 
+Grafana Configuration -> Data Sources tab -> MongoDB
 
 Uder HTTP Setting:
 
@@ -38,4 +47,8 @@ Under MongoDB Details:
 
 MongoDB URL: `mongodb://<dbUser>:<dbPassword>@mongodb:27017`
 
-MongoDB Database: `<dbName>`
+ -OR-
+
+MongoDB URI: `mongodb+srv://<dbUser>:<dbPassword>@<dbCluster>.<dbHost.net>/`
+
+MongoDB Database: **LEAVE THIS BLANK**
