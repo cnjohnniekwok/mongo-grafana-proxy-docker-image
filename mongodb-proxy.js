@@ -324,16 +324,16 @@ function runAggregateQuery( requestId, queryId, body, queryArgs, res, next )
       logQuery(queryArgs.pipeline, queryArgs.agg_options)
       var stopwatch = new Stopwatch(true)
 
-      console.log("[Debug] queryId -: " + queryId);
-      console.log("[Debug] dbLookUp -: " + dbLookUp);
-      console.log("[Debug] body.targets.db -: '" + dbLookUp + "'" )
-      console.log("[Debug] body.db.db -: '" + body.db.db + "'")
-      console.log("[Debug] queryArg.collection -: '" + queryArgs.collection + "'")
-      console.log("-------------------------------------")
-      console.log(queryArgs.pipeline)
-      console.log("-------------------------------------")
-      console.log(queryArgs.agg_options)
-      console.log("-------------------------------------")
+      //console.log("[Debug] queryId -: " + queryId);
+      //console.log("[Debug] dbLookUp -: " + dbLookUp);
+      //console.log("[Debug] body.targets.db -: '" + dbLookUp + "'" )
+      //console.log("[Debug] body.db.db -: '" + body.db.db + "'")
+      //console.log("[Debug] queryArg.collection -: '" + queryArgs.collection + "'")
+      //console.log("-------------------------------------")
+      //console.log(queryArgs.pipeline)
+      //console.log("-------------------------------------")
+      //console.log(queryArgs.agg_options)
+      //console.log("-------------------------------------")
 
       collection.aggregate(queryArgs.pipeline, queryArgs.agg_options).toArray(function(err, docs)
         {
