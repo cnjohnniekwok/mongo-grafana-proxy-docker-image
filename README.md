@@ -1,5 +1,5 @@
 # mongo-grafana_proxy
-Mongo proxy for grafana MongoDB datasource. This is a docker image for stand alone mongo proxy server that runs along with [grafana-mongods](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods).
+Mongo proxy for grafana MongoDB datasource. This is a docker image for stand alone mongo proxy server that runs along with grafana-mongods ([DockerHub](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods) | [GitHub](https://github.com/cnjohnniekwok/grafana-mongods)).
 
 This mongo-grafna_proxy is mondified to allow multiple database access from using a single MongoDB data source.
 
