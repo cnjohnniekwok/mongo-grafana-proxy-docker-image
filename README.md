@@ -1,5 +1,5 @@
-# mongo-grafana_proxy
-Mongo proxy for grafana MongoDB datasource. This is a docker image for stand alone mongo proxy server that runs along with grafana-mongods ([DockerHub](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods) | [GitHub](https://github.com/cnjohnniekwok/grafana-mongods)).
+# mongo-grafana-proxy-docker-image ([Docker Hub](https://hub.docker.com/repository/docker/cnjohnniekwok/mongo-grafana_proxy))
+Mongo proxy for grafana MongoDB datasource. This is a docker image for stand alone mongo proxy server that runs along with mongods-grafana-docker-image ([DockerHub](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods) | [GitHub](https://github.com/cnjohnniekwok/mongodb-grafana-docker-image)).
 
 This mongo-grafna_proxy is mondified to allow multiple database access from using a single MongoDB data source.
 
@@ -10,10 +10,10 @@ db.<database>.<collection>.aggregate({})
 ```
 
 
-# grafana-mongods:7.4.2 ([Docker Hub](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods))
+# mongods-grafana-docker-image ([Docker Hub](https://hub.docker.com/repository/docker/cnjohnniekwok/grafana-mongods))
 Use specific granfana version (current build image is 7.4.2) with [JamesOsgood / mongodb-grafana](https://github.com/JamesOsgood/mongodb-grafana) plugin installed (Run proxy separately)
 
-This image will not start proxy server inside the grafana-x.x.x-mongods instance. A separate [mongo-grafana_proxy](https://hub.docker.com/repository/docker/cnjohnniekwok/mongo-grafana_proxy) container can be run along side within the same network. If you want to run mongo proxy server within the same container you can do so as well, please follow [JamesOsgood](https://github.com/JamesOsgood/mongodb-grafana#install-and-start-the-mongodb-proxy-server) start mongo proxy guide.
+This image will not start proxy server inside the grafana-mongods instance. A separate mongo-grafana-proxy-docker-image ([DockerHub](https://hub.docker.com/repository/docker/cnjohnniekwok/mongo-grafana_proxy) | [GitHub](https://github.com/cnjohnniekwok/mongodb-grafana-proxy-docker-image)) can be run along side within the same network. If you want to run mongo proxy server within the same container you can do so as well, please follow [JamesOsgood](https://github.com/JamesOsgood/mongodb-grafana#install-and-start-the-mongodb-proxy-server) start mongo proxy guide.
 
 Run grafana server ver. `7.4.2` with mongodb datasource pre-install container using `docker run` :
 
