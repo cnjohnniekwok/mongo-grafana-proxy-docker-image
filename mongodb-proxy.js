@@ -298,14 +298,23 @@ function runAggregateQuery( requestId, queryId, body, queryArgs, res, next )
     {
 
       dbLookUp = body.targets[queryId].target.split(".")[1];
+      if(dbLookUp == ""){
+        //make sure database will never be empty string
+        dbLookUp = "EMPTY_DATABASE_NAME_IPNUT";
+      }
       body.db.db = dbLookUp;
-
       const db = client.db(body.db.db);
+
 
       // Get the documents collection
       if(queryArgs.collection.split(".").length > 1){
         //extract collection name, aviod triming off collection name with "." in it (consecutive "...") will treat as one "."
         queryArgs.collection = queryArgs.collection.split(".").slice(1).filter(Boolean).join(".")
+      }
+
+      if(queryArgs.collection == ""){
+        //make sure collection will never be empty string
+        queryArgs.collection = "EMPTY_COLLECITON_NAME_IPNUT";
       }
 
       const collection = db.collection(queryArgs.collection);
